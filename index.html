@@ -6,22 +6,65 @@
   <title>Nalyah</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:700|PT+Serif" rel="stylesheet">
   </head>
 </head>
 <body>
   <nav id="desktop-nav">
     <div class="logo"> Nalyah </div>
-    <div?>
-      <ul class="nav links">
-        <li><a href="aboutme.html"> About</a></li>
+    <div>
+      <ul class="nav-links">
+        <li "><a href="index.html"> Home</a></li>
         <li><a href="projects-cs.html">Projects</a></li>
-        <li><a href="index.html"> Home</a></li>
+        <li><a href="aboutme.html"> About</a></li>
       </ul>
     </div>
   </nav>
+  <nav id="hamburger-nav">
+    <div class="logo"> Nalyah </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="togglemenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="index.html" onclick="togglemenu()"> Home</a></li>
+        <li><a href="projects-cs.html" onclick="togglemenu()">Projects</a></li>
+        <li><a href="aboutme.html" onclick="togglemenu()"> About</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img id="pfp" src="./images/about me/vertical-cropped.jpg" alt="Nalyah profile picture">
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Nalyah</h1>
+      <p id="typing"><span class="auto-type"></span></p>
+    </div>
+  </section>
+  <div>
+    <p id="short-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Condimentum lacinia quis vel eros donec. Nascetur ridiculus mus mauris vitae ultricies leo.
+    </p>
+  </div>
+<footer> 
+  <p>Let's Connect!</p>
+  
+</footer>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["an aspiring software engineer", "a^150 theatre kid", "a^150 self-starter"],
+      typeSpeed: 50,
+      backSpeed: 35,
+      startDelay: 150,
+      backDelay: 1000,
+      loop:true
+    })
+  </script>
 </body>
 </html>
