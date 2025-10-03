@@ -10,6 +10,7 @@
   header, h1, h2, h3, h4, h5, h6 {
     font-family: 'Archivo', sans-serif;
     }
+
   html {
     scroll-behavior: smooth;
   }
@@ -31,14 +32,14 @@
     padding-right: 25px;
     align-items: center;
     height: 60px;
-  
-    
   }
+
   .nav-links {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
   }
+
   a {
     color: #745C97;
     text-decoration: none;
@@ -47,7 +48,6 @@
   }
 
   a:hover {
-
     color: #B8B8FF;
     text-decoration: underline;
     text-underline-offset: .5rem;
@@ -82,7 +82,7 @@
     width: 30px;
     height: 2px;
     background-color: #745C97;
-    transition: all .3 ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .menu-links {
     position: absolute;
@@ -92,7 +92,7 @@
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all .3 ease-in-out;
+    transition: all 0.3s ease-in-out;;
   }
 
   .menu-links a {
@@ -100,9 +100,9 @@
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: palevioletred;
+    color:  #745C97;
     text-decoration: none;
-    transition: all .3 ease-in-out;
+    transition: all 0.3s ease-in-out;;
   }
   .menu-links li {
     list-style: none;
@@ -125,14 +125,18 @@
   .hamburger-icon span:first-child {
     opacity: 1;
   }
-  .hamburger-icon span:first-child {
-    transform: none;
-  }
 
   #typing {
     color: #745C97;
     font-size: 30px;
   }
+
+  main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
   section {
     padding-top: 4vh;
     height: 96vh;
@@ -149,7 +153,7 @@
     display: flex;
     padding-top: 20vh;
     justify-content: center;
-    height: 40vh;
+    height: auto; min-height: 60vh;;
     gap: 1rem;
     
   }
@@ -186,162 +190,146 @@
   .title {
     font-size: 5rem;
     text-align: center;
-  } 
-  
-  #short-bio {
-    display: flex;
-    padding: 25vh;
   }
 
   footer {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #745C97;
     font-family: 'Archivo', sans-serif;   
     color: white;
-    height: 35px;
-    justify-content: space-between;
-    padding-top: 17.5px;
-    padding-left: 15px;
+    padding: 17.5px 25px;
     font-size: large;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     box-shadow: 2px 2px 8px #53426d8c;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+  }
+  .social-icons {
+  display: flex;
+  gap: 20px;
   }
 
-  /* General Body Styles (ensure proper background and overflow) */
-body {
-    margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll for shapes */
-    /* If you have a background color for the body, ensure it lets shapes show */
-    background-color: #f7f7f7; /* Example light background, adjust as needed */
-    position: relative; /* Essential for z-index of content */
-    min-height: 100vh; /* Ensure body takes full viewport height for shapes to fill */
+  .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #B8B8FF;
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+  .background-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* Background Shapes Container */
-.background-shapes {
-    position: fixed; /* Keep shapes in place during scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Hide parts of shapes that go off-screen */
-    z-index: -1; /* Ensure shapes are behind all content */
-    pointer-events: none; /* Make shapes unclickable, letting user interact with content */
-}
-
-/* Base style for all shapes */
 .shape {
-    position: absolute;
-    opacity: 0.2; /* Semi-transparent */
-    animation: float-drift 20s infinite linear; /* Base animation */
+  position: absolute;
+  opacity: 0.2;
+  animation: float-drift 20s infinite linear;
 }
 
-/* Specific Shape Styles (based on your sketch colors and forms) */
-
-/* Circle - Purple */
 .circle-purple {
-    width: 100px;
-    height: 100px;
-    background-color: #b19cd9; /* Light purple */
-    border-radius: 50%;
-    top: 10%;
-    left: 70%;
-    animation-delay: 0s;
-    animation-duration: 22s;
+  width: 180px;
+  height: 180px;
+  background-color: #D4C5F9; /* Soft lavender */
+  border-radius: 50%;
+  top: 10%;
+  left: 70%;
+  animation-delay: 0s;
+  animation-duration: 22s;
 }
 
-/* Square - Green */
 .square-green {
-    width: 120px;
-    height: 120px;
-    background-color: #98fb98; /* Light green */
-    top: 60%;
-    left: 80%;
-    animation-delay: 5s;
-    animation-duration: 18s;
+  width: 200px;
+  height: 200px;
+  background-color: #C8E6C9; /* Soft mint green */
+  top: 60%;
+  left: 80%;
+  animation-delay: 5s;
+  animation-duration: 18s;
 }
 
-/* Diamond - Blue (achieved with rotation) */
 .diamond-blue {
-    width: 90px;
-    height: 90px;
-    background-color: #a7d9f7; /* Light blue */
-    transform: rotate(45deg); /* Rotated square to look like a diamond */
-    top: 25%;
-    left: 15%;
-    animation-delay: 10s;
-    animation-duration: 25s;
+  width: 160px;
+  height: 160px;
+  background-color: #B3E5FC; /* Soft sky blue */
+  transform: rotate(45deg);
+  top: 25%;
+  left: 15%;
+  animation-delay: 10s;
+  animation-duration: 25s;
 }
 
-/* Triangle - Yellow (achieved with borders) */
 .triangle-yellow {
-    width: 0;
-    height: 0;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent;
-    border-bottom: 120px solid #ffff99; /* Light yellow */
-    top: 75%;
-    left: 40%;
-    animation-delay: 2s;
-    animation-duration: 20s;
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 190px solid #FFF9C4; /* Soft butter yellow */
+  top: 75%;
+  left: 40%;
+  animation-delay: 2s;
+  animation-duration: 20s;
 }
 
-/* Circle - Pink (for the wavy line area in your sketch) */
 .circle-pink {
-    width: 80px;
-    height: 80px;
-    background-color: #ffb6c1; /* Light pink */
-    border-radius: 50%;
-    top: 45%;
-    left: 55%;
-    animation-delay: 7s;
-    animation-duration: 28s;
+  width: 150px;
+  height: 150px;
+  background-color: #F8BBD0; /* Soft blush pink */
+  border-radius: 50%;
+  top: 45%;
+  left: 55%;
+  animation-delay: 7s;
+  animation-duration: 28s;
 }
 
-/* Square - Light Blue (for the "Thr CS" box in your sketch) */
 .square-light-blue {
-    width: 70px;
-    height: 70px;
-    background-color: #add8e6; /* Light blue */
-    top: 15%;
-    left: 85%;
-    animation-delay: 12s;
-    animation-duration: 23s;
+  width: 130px;
+  height: 130px;
+  background-color: #E1F5FE; /* Soft powder blue */
+  top: 15%;
+  left: 85%;
+  animation-delay: 12s;
+  animation-duration: 23s;
 }
 
-
-/* Keyframe Animation for Floating/Drifting Effect */
 @keyframes float-drift {
-    0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0.2;
-    }
-    25% {
-        transform: translateY(-100px) translateX(50px) rotate(45deg);
-        opacity: 0.3;
-    }
-    50% {
-        transform: translateY(-200px) translateX(-50px) rotate(90deg);
-        opacity: 0.2;
-    }
-    75% {
-        transform: translateY(-100px) translateX(50px) rotate(135deg);
-        opacity: 0.1;
-    }
-    100% {
-        transform: translateY(0) translateX(0) rotate(180deg); /* Return to start (or go off-screen) */
-        opacity: 0.2;
-    }
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateY(-100px) translateX(50px) rotate(45deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-200px) translateX(-50px) rotate(90deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-100px) translateX(50px) rotate(135deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(180deg);
+    opacity: 0.2;
+  }
 }
 
-/* IMPORTANT: Ensure your content is above the shapes */
-/* You might need to add z-index to your main content containers */
-/* For example, for your sections: */
-nav, #profile, footer, main { /* Add any other main content wrappers here */
-    position: relative; /* Crucial for z-index to work */
-    z-index: 1; /* Higher than the background-shapes' z-index of -1 */
+nav, #profile, footer {
+  position: relative;
+  z-index: 1;
 }
-
-/* Ensure your existing body or html background doesn't hide the shapes */
-/* If you have a specific background image or color on body/html, ensure it's transparent or below z-index: -1 */
