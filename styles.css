@@ -82,7 +82,12 @@ footer p {
     color: #745C97;
   }
   .logo:hover {
-    cursor: default;
+  cursor: default;
+  color: #745C97 !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  transition: none !important;
   }
 
   #hamburger-nav {
@@ -149,8 +154,9 @@ footer p {
   }
 
   #typing {
-    color: #745C97;
-    font-size: 30px;
+  color: #745C97;
+  font-size: 30px;
+  font-family: 'Archivo', sans-serif;
   }
 
   main {
@@ -206,8 +212,9 @@ footer p {
   }
   
   .section__text__p1 {
-    text-align: center;
-    font-size: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Archivo', sans-serif;
   }
   
   .section__text__p2 {
@@ -267,6 +274,7 @@ footer p {
   position: absolute;
   opacity: 0.2;
   animation: float-drift 20s infinite linear;
+  transition: transform 0.15s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .circle-purple {
