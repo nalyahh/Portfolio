@@ -3,6 +3,28 @@
   padding: 0px;
   
   }
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  height: 44px;
+  padding: 0.4rem 0;
+  box-sizing: border-box;
+}
+
+footer p {
+  font-size: 1rem;
+}
+}
+}
   body {
     font-family: 'PT Serif', serif;
     background-color: #F8F8FF;
@@ -150,27 +172,33 @@
   }
   
   #profile {
-    display: flex;
-    padding-top: 20vh;
-    justify-content: center;
-    height: auto; min-height: 60vh;;
-    gap: 1rem;
-    
+  display: flex;
+  padding-top: 16vh;
+  justify-content: center;
+  height: auto; min-height: 60vh;
+  gap: 1rem;
   }
   
   .section__pic-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-    
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fall-in 1s ease-out forwards;
+  animation-delay: 0.2s;
   }
   
   .section__text {
-    margin-top: 20vh;
-    align-self: center;
-    text-align: center;
-    width: 500px;
+  margin-top: 8vh;
+  align-self: center;
+  text-align: center;
+  width: 500px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fall-in 1s ease-out forwards;
+  animation-delay: 0.6s;
   }
   
   .section__text p {
@@ -332,4 +360,12 @@
 nav, #profile, footer {
   position: relative;
   z-index: 1;
+}
+
+@keyframes fall-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 }
