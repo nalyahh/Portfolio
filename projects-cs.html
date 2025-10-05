@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Nalyah</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav-animations.css">
+    <link rel="icon" type="image/png" href="images/about_me/icon.png">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:700|PT+Serif|PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .message-container {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeSlideIn 0.6s ease-out forwards;
+        }
+        
+        .message-box {
+            background-color: rgba(248, 248, 255, 0.98);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(116, 92, 151, 0.1);
+            max-width: 600px;
+        }
+
+        .message-box h1 {
+            color: #745C97;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .message-box p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .message-box a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #745C97;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-family: 'Archivo', sans-serif;
+        }
+
+        .message-box a:hover {
+            background-color: #A89DF1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(116, 92, 151, 0.2);
+        }
+
+        .sparkle {
+            display: inline-block;
+            margin: 0 0.2rem;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <a class="logo" href="index.html">Nalyah</a>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects-cs.html">Projects</a></li>
+                <li><a href="aboutme.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <a class="logo" href="index.html">Nalyah</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="togglemenu()">Home</a></li>
+                <li><a href="projects-cs.html" onclick="togglemenu()">Projects</a></li>
+                <li><a href="aboutme.html" onclick="togglemenu()">About</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="message-container">
+            <div class="message-box">
+                <h1>Projects Coming Soon <span class="sparkle">✨</span></h1>
+                <p>I'm currently working on some exciting projects! In the meantime, learn more about my experience and skills on my About Me page.</p>
+                <a href="aboutme.html">Check Out My Story</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Let's Connect!</p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/nalyah" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/nalyahh" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:nalyah.deloatche@columbia.edu" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+14048246500" aria-label="Phone">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Enhanced Animations */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Profile Section Animations */
+.profile-image {
+    animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.location {
+    animation: slideUpFade 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.education {
+    animation: slideUpFade 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.4s;
+}
+
+/* Content Animations */
+.who-section {
+    animation: slideUpFade 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.6s;
+}
+
+.goals-section {
+    animation: slideUpFade 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+/* Skills and Experience Animations */
+.skills-box, .experience-box {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 1s;
+}
+
+/* Tab Content Animations */
+.tab-content.active {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.experience-item {
+    opacity: 0;
+    animation: slideUpFade 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.experience-item:nth-child(1) { animation-delay: 0.2s; }
+.experience-item:nth-child(2) { animation-delay: 0.3s; }
+.experience-item:nth-child(3) { animation-delay: 0.4s; }
+
+/* Resume Button Hover Animation */
+.resume-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(116, 92, 151, 0.15);
+}
+
+.resume-button .icon-container {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-button:hover .icon-container {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Tab Button Hover Animation */
+.tab-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(116, 92, 151, 0.15);
+}
+
+/* Skills Bubble Hover Effect */
+.skills-box .tab-content ul li {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-box .tab-content ul li:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(116, 92, 151, 0.2);
+    background-color: #9c8de4;
+}
+
+/* Initial state for animations */
+.who-section,
+.goals-section,
+.location,
+.education,
+.skills-box,
+.experience-box {
+    opacity: 0;
+}
