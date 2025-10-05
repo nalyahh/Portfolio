@@ -1,0 +1,199 @@
+/* Columns Layout */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resume-box {
+    margin-top: 2rem;
+}
+
+.resume-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.resume-button {
+    flex: 0 1 auto;
+    min-width: 200px;
+}
+
+.skills-exp-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-box,
+.experience-box {
+    background-color: rgba(248, 248, 255, 0.98);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(116, 92, 151, 0.1);
+    padding: 2rem;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #745C97;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Archivo', sans-serif;
+}
+
+.section-header {
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.skills-box .tab-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.skills-box .tab-content ul li {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.95rem;
+    color: white;
+    background-color: #A89DF1;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(116, 92, 151, 0.1);
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-item h4 {
+    color: #A89DF1;
+    margin-bottom: 0.5rem;
+    font-family: 'Archivo', sans-serif;
+}
+
+.experience-item p {
+    color: #666;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+.experience-item ul li {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    position: relative;
+}
+
+.experience-item ul li:before {
+    content: "•";
+    color: #A89DF1;
+    position: absolute;
+    left: -1.2rem;
+    top: -1px;
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .resume-options {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .resume-button {
+        flex: 0 1 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .columns-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
+}

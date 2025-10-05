@@ -1,0 +1,83 @@
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Global Animation Styles */
+nav,
+.logo,
+.nav-links li,
+.section__pic-container,
+.section__text,
+.background-shapes .shape,
+.content-box,
+.resume-box,
+.profile-image,
+.location,
+.who-section,
+.goals-section,
+.values-section,
+footer,
+.social-icons a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.6s ease-out forwards;
+}
+
+/* Navigation animations */
+.logo { animation-delay: 0.1s; }
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.3s; }
+.nav-links li:nth-child(3) { animation-delay: 0.4s; }
+
+/* Background shapes animations */
+.background-shapes .shape:nth-child(1) { animation-delay: 0.1s; }
+.background-shapes .shape:nth-child(2) { animation-delay: 0.2s; }
+.background-shapes .shape:nth-child(3) { animation-delay: 0.3s; }
+.background-shapes .shape:nth-child(4) { animation-delay: 0.4s; }
+.background-shapes .shape:nth-child(5) { animation-delay: 0.5s; }
+.background-shapes .shape:nth-child(6) { animation-delay: 0.6s; }
+
+/* Home page specific */
+.section__pic-container { animation-delay: 0.4s; }
+.section__text .section__text__p1 { animation-delay: 0.5s; }
+.section__text h1 { animation-delay: 0.6s; }
+#typing { animation-delay: 0.7s; }
+
+/* About page specific */
+.content-box { 
+    animation: fadeSlideIn 0.6s ease-out forwards;
+    animation-delay: 0.3s; 
+}
+.profile-image { animation-delay: 0.4s; }
+.location { animation-delay: 0.5s; }
+.who-section { animation-delay: 0.6s; }
+.goals-section { animation-delay: 0.7s; }
+.values-section { animation-delay: 0.8s; }
+.resume-box { animation-delay: 0.9s; }
+
+/* Projects page specific */
+.project-card { animation-delay: 0.4s; }
+
+/* Footer elements */
+footer { animation-delay: 0.8s; }
+.social-icons a:nth-child(1) { animation-delay: 0.9s; }
+.social-icons a:nth-child(2) { animation-delay: 1s; }
+.social-icons a:nth-child(3) { animation-delay: 1.1s; }
+.social-icons a:nth-child(4) { animation-delay: 1.2s; }
+
+/* Remove any existing opacity: 0 from other stylesheets */
+.content-box,
+.resume-box,
+.who-section,
+.goals-section,
+.values-section {
+    opacity: initial;
+    transform: initial;
+}

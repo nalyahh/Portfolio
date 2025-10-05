@@ -1,8 +1,8 @@
 * {
   margin: 0px;
   padding: 0px;
-  
-  }
+  box-sizing: border-box;
+}
 html, body {
   height: 100%;
 }
@@ -11,13 +11,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 footer {
-  margin-top: auto;
+  flex-shrink: 0;
   height: 44px;
   padding: 0.4rem 0;
-  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  margin-top: 2rem;
 }
 
 footer p {
@@ -54,6 +58,7 @@ footer p {
     padding-right: 25px;
     align-items: center;
     height: 60px;
+    margin-top: 1rem;
   }
 
   .nav-links {
@@ -115,11 +120,13 @@ footer p {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: transparent;
+    background-color: rgba(248, 248, 255, 0.95);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(116, 92, 151, 0.1);
   }
 
   .menu-links a {
@@ -127,9 +134,17 @@ footer p {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color:  #745C97;
+    color: #745C97;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;;
+    text-decoration-color: #745C97;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-links a:hover {
+    color: #B8B8FF;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+    text-decoration-color: #B8B8FF;
   }
   .menu-links li {
     list-style: none;
@@ -160,9 +175,10 @@ footer p {
   }
 
   main {
-  flex: 1;
+  flex: 1 0 auto;
   position: relative;
   z-index: 1;
+  min-height: calc(100vh - 80px);
 }
 
   section {
@@ -187,6 +203,8 @@ footer p {
   
   .section__pic-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 400px;
   width: 400px;
   margin: auto 0;
@@ -194,6 +212,14 @@ footer p {
   transform: translateY(-50px);
   animation: fall-in 1s ease-out forwards;
   animation-delay: 0.2s;
+}
+
+.section__pic-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   }
   
   .section__text {

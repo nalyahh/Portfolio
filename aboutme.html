@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Nalyah</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="nav-animations.css">
+    <link rel="icon" type="image/png" href="images/about_me/icon.png">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="tabs.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:700|PT+Serif|PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape circle-purple"></div>
+        <div class="shape square-green"></div>
+        <div class="shape diamond-blue"></div>
+        <div class="shape triangle-yellow"></div>
+        <div class="shape circle-pink"></div>
+        <div class="shape square-light-blue"></div>
+    </div>
+
+    <nav id="desktop-nav">
+        <a class="logo" href="index.html">Nalyah</a>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects-cs.html">Projects</a></li>
+                <li><a href="aboutme.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <a class="logo" href="index.html">Nalyah</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="togglemenu()">Home</a></li>
+                <li><a href="projects-cs.html" onclick="togglemenu()">Projects</a></li>
+                <li><a href="aboutme.html" onclick="togglemenu()">About</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-page">
+        <section class="about-section">
+            <div class="content-box">
+                <div class="content-grid">
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            <img src="./images/about_me/DSC06019 (1).JPG" alt="Nalyah portrait">
+                        </div>
+                        <div class="location">
+                            <p>New York, NY</p>
+                        </div>
+                        <div class="education">
+                            <h3>Education</h3>
+                            <p class="university"><strong>Columbia University</strong> <i class="fas fa-crown"></i></p>
+                            <p>B.S. Computer Science, 2027</p>
+                            <p>Minor in Biomedical Engineering</p>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <div class="who-section">
+                            <h2>Who am I?</h2>
+                            <p>I am an experienced theatre lover, skilled in technical direction, stage management, and lighting design. Concurrently, I am pursuing a Bachelor of Science in Computer Science with a minor in Biomedical Engineering. I excel in both the world of creative production and the field of analytical problem-solving, bringing a dedicated and precise approach to each distinct discipline.</p>
+                        </div>
+
+                        <div class="goals-section">
+                            <h2>Goals</h2>
+                            <ul>
+                                <li>To lead complex projects in both technical and creative environments.</li>
+                                <li>To consistently seek out challenges that require both analytical rigor and creative ingenuity.</li>
+                                <li>To build a career that embraces my passion for mastering different disciplines, from the arts to engineering.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-box">
+                <div class="resume-options">
+                    <a href="./resumes/Resume - CS Nalyah Deloatche.pdf" class="resume-button">
+                        <div class="icon-container">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>Computer Science CV</span>
+                    </a>
+                    <a href="./resumes/Nalyah Deloatche - Theatre CV Feb 2025.pdf" class="resume-button">
+                        <div class="icon-container">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <span>Theatre CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="skills-exp-section">
+                    <div class="content-box skills-box">
+                        <div class="skills-column">
+                            <h2 class="section-header">Skills</h2>
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="cs-skills">CS</button>
+                                <button class="tab-btn" data-tab="theatre-skills">Theatre</button>
+                            </div>
+                            <div class="tab-content active" id="cs-skills">
+                                <ul>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>JavaScript & React</li>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>Git & Version Control</li>
+                                    <li>SQL & Database Design</li>
+                                    <li>Data Structures</li>
+                                    <li>RESTful APIs</li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="theatre-skills">
+                                <ul>
+                                    <li>Stage Management</li>
+                                    <li>Technical Direction</li>
+                                    <li>Lighting Design</li>
+                                    <li>Props Management</li>
+                                    <li>Production Assistant</li>
+                                    <li>Organization</li>
+                                    <li>Communication</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="content-box experience-box">
+                        <div class="experience-column">
+                            <h2 class="section-header">Experience</h2>
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="cs-exp">CS</button>
+                                <button class="tab-btn" data-tab="theatre-exp">Theatre</button>
+                            </div>
+                            <div class="tab-content active" id="cs-exp">
+                                <div class="experience-item">
+                                    <h4>Personal Portfolio Website</h4>
+                                    <p>Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript with modern animations and clean design</p>
+                                </div>
+                                <div class="experience-item">
+                                    <h4>Notion AO3 API Integration</h4>
+                                    <p>Created a custom integration using Python to fetch and organize Archive of Our Own data in Notion databases</p>
+                                </div>
+
+                            </div>
+                            <div class="tab-content" id="theatre-exp">
+                                <div class="experience-item">
+                                    <h4>Stage Manager</h4>
+                                    <ul>
+                                        <li>A White Girl's Understudy - The Chain Theatre</li>
+                                        <li>Richard III - King's Crown Shakespeare Troupe</li>
+                                        <li>Oliver! - Camden County Fine Arts Department</li>
+                                    </ul>
+                                </div>
+                                <div class="experience-item">
+                                    <h4>Technical Director</h4>
+                                    <ul>
+                                        <li>Ride the Cyclone - Columbia Musical Theatre Society</li>
+                                    </ul>
+                                </div>
+                                <div class="experience-item">
+                                    <h4>Lighting Designer</h4>
+                                    <ul>
+                                        <li>Anastasia - Columbia Musical Theatre Society</li>
+                                        <li>Next to Normal - Columbia Musical Theatre Society</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer> 
+        <p>Let's Connect!</p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/nalyah" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/nalyahh" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:nalyah.deloatche@columbia.edu" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+14048246500" aria-label="Phone">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tabs.js"></script>
+</body>
+</html>
