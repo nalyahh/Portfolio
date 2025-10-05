@@ -71,4 +71,4 @@ This website was built using fundamental web technologies:
 
 Thanks for checking out my code! You can see the final, live version of my portfolio at [nalyah.xyz](https://nalyah.xyz).
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/nalyah]) or check out my other projects on my [GitHub Profile](https://github.com/nalyahh]).
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/nalyah) or check out my other projects on my [GitHub Profile](https://github.com/nalyahh).
