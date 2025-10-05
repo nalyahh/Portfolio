@@ -1,6 +1,7 @@
 /* About Page Styles */
 .about-page {
-  padding-top: 8vh;
+  padding-top: 12vh;
+  padding-bottom: 80px;
   min-height: calc(100vh - 80px);
 }
 
